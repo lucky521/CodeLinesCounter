@@ -2,7 +2,7 @@
 #--coding=UTF8--
 import os, sys
 
-f1 = file("countingreport",'w')
+f1 = file("countingreport.txt",'w')
 extension_name = ['py', 'cpp', 'c','h','cc','java','js', 'sh']
 
 #########################################################
@@ -57,12 +57,13 @@ input_name = sys.argv[1:]
 input_list = ""
 for name in input_name:
 	counting(name)
-	input_list = name + " "
+	input_list = input_list + " " + name
 
 print "######[Done]######"
 print "Input File	:" + input_list
 print "Count of directory	:" + str(dircount)
 print "Count of file	:" + str(filecount)
 print "Count of line	:" + str(linecount)
+print "Refer to countingreport.txt for details."
 
 f1.close()
